@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3001/api/v1",
+  baseURL: "https://backendbaguette-production-ad38.up.railway.app",
 });
 
 export default API;
