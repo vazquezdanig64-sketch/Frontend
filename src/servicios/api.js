@@ -1,7 +1,10 @@
 import axios from "axios";
 
+// Si existe la variable de entorno la usa, si no, usa la de Render directamente
 const API = axios.create({
-  baseURL: "http://localhost:3001/api/v1",
+  baseURL:
+    import.meta.env.VITE_API_URL ||
+    "https://backendbaguette-1.onrender.com/api/v1",
 });
 
 export default API;
