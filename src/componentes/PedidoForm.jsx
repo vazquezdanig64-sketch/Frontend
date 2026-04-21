@@ -67,9 +67,7 @@ function PedidoForm() {
           "Error 404: No se encontró la ruta en el servidor. Revisa el api.js",
         );
       } else {
-        alert(
-          "Error al guardar el pedido. Revisa la consola o los logs de Railway.",
-        );
+        alert("Error al conectar con el servidor local.");
       }
     } finally {
       setLoading(false);
