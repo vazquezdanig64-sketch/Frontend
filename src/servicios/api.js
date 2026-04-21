@@ -1,14 +1,13 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL:
-    import.meta.env.VITE_API_URL ||
-    "https://backendbaguette-1.onrender.com/api/v1",
+  // URL base limpia sin subrutas
+  baseURL: import.meta.env.VITE_API_URL || "https://backendbaguette-1.com",
 });
 
-// Este interceptor añade la API KEY a todas las peticiones automáticamente
+// Interceptor para la seguridad (Fase 4)
 API.interceptors.request.use((config) => {
-  config.headers["x-api-key"] = "full-stack"; // Debe ser igual a la variable API_KEY en Render
+  config.headers["x-api-key"] = "full-stack";
   return config;
 });
 
